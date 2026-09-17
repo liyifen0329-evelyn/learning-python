@@ -110,9 +110,7 @@ print("类型是:", type(lines))
 # readlines() 给你一个列表, 每行是列表里的一项 ——
 # 这正是你第 4 课学的列表, 所以可以直接 for 循环:
 
-with open("data/welcome.txt", encoding="utf-8") as f:
-    for line in f:
-        print("一行:", line)
+
 
 # ★ 再猜: 为什么每个 "一行:" 之间多出一个空行?
 
@@ -121,10 +119,6 @@ with open("data/welcome.txt", encoding="utf-8") as f:
 # 4. strip(): 把末尾藏着的那个 \n 剪掉
 # ============================================================
 
-with open("data/welcome.txt", encoding="utf-8") as f:
-    for line in f:
-        line = line.strip()
-        print("剪掉后:", line)
 
 # 文件里每一行末尾本来就藏着一个 \n —— "换行符"。
 # 你看不见它, 但它是真实存在的一个字符。
@@ -156,6 +150,7 @@ with open("data/welcome.txt", encoding="utf-8") as f:
 # ============================================================
 # 第 1 步: 打开 data/welcome.txt, 一行一行读,
 #          每行先 strip() 再打印 —— 确认空行没了。
+
 
 # 第 2 步: 给它加上行号, 变成:
 #              1 香港低空经济 · 第 8 课演示文件
