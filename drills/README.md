@@ -80,6 +80,7 @@ lesson6b、lesson7b 的作业是"把 summary_old 整个抄下来，只动第一�
 | 09-24 | 卡 09 · pandas 一行流 | ✗ 第一轮 → ✓ 第二轮 | 全忘了要用 `pd.read_csv`，整段走回 `open()` 手读文件；`pd`/`df` 名字混用；路径忘加引号；不知道 `df.shape` |
 | 09-27 | 卡 11 · 筛选 + 计数 | ✓ 一次写成 | 全对。唯一的手滑是终端里漏了 `drills/`（`python3 moxie_13.py`）；`df[]` 空着卡了一下，给了"方括号里装一串 True/False"的提示后自己拼出来了；计数自己想起用"外面套一层" |
 | 09-28 | 卡 12 · `df.loc` 打标签（三档） | ✓ 基本写成 | **三行的顺序是我自己改对的**（兜底在前、松的在前、严的在后）——老师只问了一句"哪一行必须写在最前面"，没给答案。手滑两处：`print("status")` 把"名字"当"内容"（我当时以为那是"给表加一列 status"）；`print(pd)` 箱子名混用。emoji 忘了加 |
+| 09-29 | 卡 13 · 排序 + 汇总 | ✓ 写成（改了 4 轮） | **概念 2 处 + 形状/记忆 2 处**。真概念：① 把 `sort_values` 挂在**一列**身上（`df["height_m"].sort_values("height_m")`）→ `ValueError: No axis named height_m for object type Series` —— 分清了"**只有整张表才说得上『按哪一列排』**"（回扣第 12 课 DataFrame vs Series） ② 忘了"数类别"的工具叫 `value_counts`（写成了 `.sort_values`）—— 这是**记忆漏洞**，不是概念漏洞。形状：`df_sorted[["height_m"],ascending = False]` —— 把"动作"写成了方括号（`[ ]`取东西 vs `( )`叫动作干活）。**第三次**栽在"报名字 vs 抱东西"：`print("status".sort_values)` → `AttributeError: 'str' object has no attribute 'sort_values'`。卖点：**两轮报错里 Python 的猜测（`Maybe you meant '=='`）全猜错了，最后一行永远准** —— 第 3 次验证。`ascending=False` 和"要拿个箱子接住新表"都自己想起来了 ✅ |
 
 ---
 
